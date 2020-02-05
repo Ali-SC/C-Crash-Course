@@ -55,15 +55,15 @@ void sendOutput(double *arr, int years);
 
 int main(void) {
 
-  Investment inv;             // variable definition, ==SecA.4.5==
+  Investment inv;               // variable definition, ==SecA.4.5==
 
-  while(getUserInput(&inv)) { // while loop ==SecA.4.14==
-  inv.invarray[0] = inv.inv0; // struct access ==SecA.4.4==
-  calculateGrowth(&inv);      // & referencing (pointers) ==SecA.4.6, A.4.8==
-  sendOutput(inv.invarray,    // passing a pointer to an array ==SecA.4.9==
-  inv.years);                 // passing a value, not a pointer ==SecA.4.6==
+  while(getUserInput(&inv)) {   // while loop ==SecA.4.14==
+    inv.invarray[0] = inv.inv0; // struct access ==SecA.4.4==
+    calculateGrowth(&inv);      // & referencing (pointers) ==SecA.4.6, A.4.8==
+    sendOutput(inv.invarray,    // passing a pointer to an array ==SecA.4.9==
+               inv.years);      // passing a value, not a pointer ==SecA.4.6==
   }
-  return(0);                  // return value of main ==SecA.4.6==
+  return(0);                    // return value of main ==SecA.4.6==
 } // ***** END main *****
 
 /******************************************************************************
